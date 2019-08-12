@@ -5,17 +5,29 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-require "faker"
+
+agence = User.create!(
+  name: Faker::Name.unique.name,
+  email: 'agence@exemple.com',
+  password: 'password',
+  address: Faker::Address.full_address
+)
+
+locataire = User.create!(
+  name: Faker::Name.unique.name,
+  email: 'locataire@exemple.com',
+  password: 'password',
+  address: Faker::Address.full_address,
+)
 
 
 10.times do
-  user = User.new(
-    name: Faker::Sports::Football.player,
-    address: Faker::Address.city,
-    email: Faker::Internet.email,
-    photo: Faker.image.imageUrl();
-    description: Faker::Movies::VForVendetta.speech;
-    offers: Faker::Commerce.department(max: 3)
-    )
-
-  user.save
+  Sportif.create!(
+    name: Faker::Name.unique.name,
+    address: Faker::Address.full_address,
+    description: 'Je me prepare pour les prochains Jeux Olympique',
+    photo: Faker::Avatar.image,
+    offers: 'Pack Visibilite, Pack Corporate, Pack Immersion',
+    user: agence
+  )
+end
