@@ -13,6 +13,7 @@ class SportifsController < ApplicationController
 
   def new
     @sportif = Sportif.new
+    authorize @sportif
   end
 
   def create

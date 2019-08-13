@@ -1,10 +1,11 @@
 class ReservationsController < ApplicationController
   def index
-    @reservations = current_user.reservations
+    @reservations = policy_scope(current_user.reservations)
   end
 
   def create
     @reservation = Reservation.new
+    authorize @reservation
     @reservation.sportif = Sportif.find(params[:sportif_id])
     @reservation.user = current_user
 
