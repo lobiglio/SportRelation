@@ -1,12 +1,14 @@
 class SportifsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :set_sportif, only: [:show, :edit, :update, :destroy]
 
   def index
-    @sportifs = Sportif.all.order("created_at DESC")
+    @sportifs = policy_scope(Sportif).order(created_at: :desc)
   end
 
   def show
     @sportif = Sportif.find(params[:id])
+    authorize @sportif
   end
 
   def new
@@ -15,6 +17,7 @@ class SportifsController < ApplicationController
 
   def create
     @sportif = Sportif.new(sportif_params)
+    authorize @sportif
     @sportif.user = current_user
     if @sportif.save
       redirect_to sportif_path(@sportif)
@@ -24,9 +27,11 @@ class SportifsController < ApplicationController
   end
 
   def edit
+    authorize @sportif
   end
 
   def update
+    authorize @sportif
     @sportif.update(sportif_params)
     redirect_to sportif_path(@sportif)
   end
