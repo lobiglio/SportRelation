@@ -2,7 +2,6 @@
   <div class="container">
     <h1>SportRelation brings <strong>entreprises</strong> to <strong>sport people</strong>!</h1>
     <p>Be part of the adventure!</p>
-    <a class="btn btn-flat" href="#">Book now</a>
   </div>
 </div>
 
@@ -11,10 +10,10 @@
   <div class="cards">
     <% @sportifs.each do |sportif| %>
 
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1485908953667-cf6d88997642?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1620&q=80)">
-      Sportif
-      <%= link_to sportif_path(sportif)  %>
-      <% end %>
-    </div>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1485908953667-cf6d88997642?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1620&q=80)">
+        <%= link_to sportif.name, sportif_path(sportif)  %>
+      </div>
+    <% end %>
+
   </div>
 </div>
