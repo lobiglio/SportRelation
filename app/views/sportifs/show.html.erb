@@ -1,1 +1,35 @@
-show.html.erb
+<div class="container" >
+  <h1><%= @sportif.name %></h1>
+  <div id="image-sportif">
+    <div>
+      <img src="<%=@sportif.photo %>" alt="photo du sportif">
+    </div>
+    <div>
+      <h3> <%= @sportif.offers%> </h3>
+    </div>
+  </div>
+  <div id ="presentation-sportif">
+    <h3> Description: </h3>
+    <p> <%= @sportif.description %> </p>
+  </div>
+<%= link_to "Rejoins l'aventure", new_sportif_reservation_path %>
+<%= link_to "Modifier", edit_sportif_path(@sportif) %>
+
+</div>
+
+
+
+
+
+
+
+
+
+<!--   <p> <%= @sportif.description %> </p>
+  <div class="video-sportif"></div>
+  <div class="offers-sportif"></div>
+</div>
+  <%= link_to "Autres sportifs", root_path %>
+</div>
+ -->
+

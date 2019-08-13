@@ -2,13 +2,12 @@ class SportifsController < ApplicationController
   before_action :set_sportif, only: [:show, :edit, :update, :destroy]
 
   def index
-    @sportifs = Sportif.all
+    @sportifs = Sportif.all.order("created_at DESC")
   end
 
   def show
     @sportif = Sportif.find(params[:id])
   end
-
 
   def new
     @sportif = Sportif.new
@@ -16,6 +15,7 @@ class SportifsController < ApplicationController
 
   def create
     @sportif = Sportif.new(sportif_params)
+    @sportif.user = current_user
     if @sportif.save
       redirect_to sportif_path(@sportif)
     else

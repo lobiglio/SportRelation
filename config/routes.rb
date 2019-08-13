@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :sportifs, only: [:index, :show, :new, :create] do
     resources :reservations, only: [:new, :create]
-  end
+
   resources :reservations, only: :index
 
 end
