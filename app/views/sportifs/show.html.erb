@@ -12,14 +12,10 @@
     <h3> Description: </h3>
     <p> <%= @sportif.description %> </p>
   </div>
+
 <%= link_to "Rejoins l'aventure", sportif_reservations_path(@sportif), method: :post %>
 <% if policy(@sportif).edit? %>
   <%= link_to "Modifier", edit_sportif_path(@sportif) %>
 <% end %>
 
 </div>
-
-
-
-
-
