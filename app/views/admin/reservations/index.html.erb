@@ -1,0 +1,6 @@
+<h1>Your booked reservations</h1>
+<ul>
+  <% @reservations.each do |reservation| %>
+  <li><%= reservation.sportif.name %> - <%= reservation.status %></li>
+  <% end %>
+</ul>
