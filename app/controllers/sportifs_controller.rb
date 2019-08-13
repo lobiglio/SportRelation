@@ -6,7 +6,7 @@ class SportifsController < ApplicationController
   end
 
   def new
-    @sportif = Sportitf.new
+    @sportif = Sportif.new
   end
 
   def create
