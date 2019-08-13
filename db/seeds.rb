@@ -25,17 +25,37 @@ locataire = User.create!(
 )
 
 puts "Creating sportifs"
-10.times do
-  sportif = Sportif.new(
+3.times do
+  Sportif.create!(
     name: Faker::Name.unique.name,
     address: Faker::Address.full_address,
     description: 'Je me prepare pour les prochains Jeux Olympique',
     offers: 'Pack Visibilite, Pack Corporate, Pack Immersion',
+    photo: File.open(Rails.root.join('db/fixtures/images/francois_dhaen.jpeg')),
     user: agence
   )
-  sportif.remote_photo_url = "https://source.unsplash.com/random"
+end
 
-  sportif.save!
+2.times do
+  Sportif.create!(
+    name: Faker::Name.unique.name,
+    address: Faker::Address.full_address,
+    description: 'Je me prepare pour les prochains Jeux Olympique',
+    offers: 'Pack Visibilite, Pack Corporate, Pack Immersion',
+    photo: File.open(Rails.root.join('db/fixtures/images/francois_gabart.jpg')),
+    user: agence
+  )
+end
+
+3.times do
+  Sportif.create!(
+    name: Faker::Name.unique.name,
+    address: Faker::Address.full_address,
+    description: 'Je me prepare pour les prochains Jeux Olympique',
+    offers: 'Pack Visibilite, Pack Corporate, Pack Immersion',
+    photo: File.open(Rails.root.join('db/fixtures/images/kelly_slater.jpg')),
+    user: agence
+  )
 end
 
 puts "Done"
