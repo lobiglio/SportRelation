@@ -1,7 +1,9 @@
-<h1>Your reservations</h1>
-<ul>
-  <% @reservations.each do |reservation| %>
-    <li><%= reservation.sportif.name %><br>
-      This reservation is <%= reservation.status %></li>
-  <% end %>
-</ul>
+<div class="container">
+  <h1>Your reservations</h1>
+    <ul>
+      <% @reservations.each do |reservation| %>
+        <li><%= reservation.sportif.name %><br>
+          This reservation is <%= reservation.status %></li>
+      <% end %>
+    </ul>
+</div>
