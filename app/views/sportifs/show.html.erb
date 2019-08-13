@@ -13,23 +13,8 @@
     <p> <%= @sportif.description %> </p>
   </div>
 
+<%= link_to "Rejoins l'aventure", sportif_reservations_path(@sportif), method: :post %>
 <%= link_to "Modifier", edit_sportif_path(@sportif) %>
 
 </div>
-
-
-
-
-
-
-
-
-
-<!--   <p> <%= @sportif.description %> </p>
-  <div class="video-sportif"></div>
-  <div class="offers-sportif"></div>
-</div>
-  <%= link_to "Autres sportifs", root_path %>
-</div>
- -->
 
