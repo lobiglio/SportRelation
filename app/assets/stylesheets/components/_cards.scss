@@ -89,3 +89,14 @@
 .card-product .card-product-infos {
   padding: 16px;
 }
+
+.card-category a {
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+  text-decoration: none;
+}
+
+.card-category a:hover {
+  color: black;
+}
+
