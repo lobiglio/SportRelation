@@ -1,8 +1,8 @@
 <div class="form">
-    <div class="col-sm-6" id="formulaire">
-      <h2>Sign up</h2>
+  <div class="col-sm-6" id="formulaire">
+    <h2>Sign up</h2>
 
-      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= f.error_notification %>
 
       <div class="form-inputs">
@@ -20,12 +20,11 @@
       </div>
 
       <div class="choice-btn">
-      <div class="form-actions">
-        <%= f.button :submit , "Sign up", class: "btn btn-gradient" %>
+        <div class="form-actions">
+          <%= f.button :submit , "Sign up", class: "btn btn-gradient" %>
+        </div>
+        <%= render "devise/shared/links" %>
       </div>
-      <% end %>
-
-      <%= render "devise/shared/links" %>
-    </div>
+    <% end %>
   </div>
 </div>
