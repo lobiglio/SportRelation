@@ -1,9 +1,15 @@
 <div class="container">
   <h1>Your reservations</h1>
-    <ul>
-      <% @reservations.each do |reservation| %>
-        <li><%= reservation.sportif.name %><br>
-          This reservation is <%= reservation.status %></li>
-      <% end %>
-    </ul>
+
+  <% @reservations.each do |reservation| %>
+    <div class="card-product">
+      <img src="<%= cl_image_path reservation.sportif.photo, height: 300, width: 400, crop: :fill %>"/>
+        <div class="card-product-infos">
+          <h2><%= reservation.sportif.name %></h2>
+          <p>This reservation is <%= reservation.status %></p>
+        </div>
+    </div>
+  <% end %>
 </div>
+
+
