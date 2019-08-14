@@ -28,7 +28,7 @@ puts "Creating sportifs"
 3.times do
   Sportif.create!(
     name: Faker::Name.unique.name,
-    address: Faker::Address.full_address,
+    address: "Lyon, France",
     description: 'Je me prepare pour les prochains Jeux Olympique',
     offers: 'Pack Visibilite, Pack Corporate, Pack Immersion',
     photo: File.open(Rails.root.join('db/fixtures/images/francois_dhaen.jpeg')),
@@ -39,7 +39,7 @@ end
 2.times do
   Sportif.create!(
     name: Faker::Name.unique.name,
-    address: Faker::Address.full_address,
+    address: "Londres, Angleterre",
     description: 'Je me prepare pour les prochains Jeux Olympique',
     offers: 'Pack Visibilite, Pack Corporate, Pack Immersion',
     photo: File.open(Rails.root.join('db/fixtures/images/francois_gabart.jpg')),
@@ -50,7 +50,7 @@ end
 3.times do
   Sportif.create!(
     name: Faker::Name.unique.name,
-    address: Faker::Address.full_address,
+    address: "Milan, Italie",
     description: 'Je me prepare pour les prochains Jeux Olympique',
     offers: 'Pack Visibilite, Pack Corporate, Pack Immersion',
     photo: File.open(Rails.root.join('db/fixtures/images/kelly_slater.jpg')),
