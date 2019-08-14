@@ -26,6 +26,7 @@ class SportifsController < ApplicationController
     puts "Check 1"
     @sportif = Sportif.new(sportif_params)
     authorize @sportif
+    @sportif.save
     puts @sportif.inspect
     redirect_to root_path
 
