@@ -6,7 +6,6 @@
 <!--     <img src="<%=@sportif.photo %>" alt=""> -->
     </div>
 
-
   <div class = "col-4 text-center" >
       <h2 id = "sportif-description"><%= @sportif.description %></h2>
       <div class="card-body">
@@ -19,16 +18,9 @@
 </div>
 </div>
 
+<%= link_to "Rejoins l'aventure", sportif_reservations_path(@sportif), method: :post %>
+<% if policy(@sportif).edit? %>
+  <%= link_to "Modifier", edit_sportif_path(@sportif) %>
+<% end %>
 
-
-
-
-
-
-
-
-
-
-
-
-
+</div>
