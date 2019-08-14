@@ -8,25 +8,18 @@
     <div class = "col-4 text-center" >
       <h2 id = "sportif-description"><%= @sportif.description %></h2>
       <div class="card-body">
-      <h3 id = "sportif-offers"><%= @sportif.offers %></h3>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <%= link_to "Rejoins l'aventure", sportif_reservations_path(@sportif), method: :post, class: "btn btn-flat" %>
+        <h3 id = "sportif-offers"><%= @sportif.offers %></h3>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <%= link_to "Rejoins l'aventure", sportif_reservations_path(@sportif), method: :post, class: "btn btn-flat" %>
       </div>
     </div>
 
   </div>
 </div>
 
+<%= link_to "Rejoins l'aventure", sportif_reservations_path(@sportif), method: :post %>
+<% if policy(@sportif).edit? %>
+  <%= link_to "Modifier", edit_sportif_path(@sportif) %>
+<% end %>
 
-
-
-
-
-
-
-
-
-
-
-
-
+</div>
