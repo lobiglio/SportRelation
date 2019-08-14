@@ -29,7 +29,6 @@ class SportifsController < ApplicationController
     @sportif.user = current_user
     @sportif.save
     puts @sportif.inspect
-    puts @sportif.messages.errors
     redirect_to root_path
 
     # @sportif = Sportif.new(sportif_params)
