@@ -1,15 +1,20 @@
 h1{
   text-align: center;
   margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1pt;
+  font-size: 30pt;
+  margin-bottom: 15px;
 }
+
 #img-sponsor {
-  display: block;
-  max-width: 50%;
-  max-height: 50%;
-  background-size: 100% auto;
   border-radius: 4px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+  background-position: center;
+  background-size: cover;
 }
 
 #sportif-address{
@@ -21,8 +26,14 @@ h1{
   text-align: center;
   margin-bottom: 60px;
   margin-top: 60px;
-  font-family:arial, sans-serif;
+  font-family: 'Libre Caslon Display', serif;
   font-style: oblique;
+}
+
+#sportif-offers {
+  color: white;
+  background-color: #75c6ea;
+  font-weight: light;
 }
 
 .card-body {
