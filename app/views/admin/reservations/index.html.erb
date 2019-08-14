@@ -10,7 +10,7 @@
             <h2><%= reservation.sportif.name %></h2>
           </div>
           <div class="card-product-infos-status">
-            <p class="mb-2" >This reservation is <%= reservation.status %></p>
+            <p class="mb-2 resa-style" >This reservation is <%= reservation.status %></p>
             <%= link_to 'Accept', reservations_path, class: "btn btn-flat btn-accept" %>
             <%= link_to 'Refuse', reservations_path, class: "btn btn-flat btn-refuse" %>
           </div>
