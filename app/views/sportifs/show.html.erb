@@ -1,5 +1,7 @@
 <div class="container" >
-  <h1><%= @sportif.name %></h1>
+  <h1
+  <span id="sportif-name" <%= @sportif.name %></span>
+  </h1>
   <p id = "sportif-address"><%= @sportif.address %></p>
   <div class="row border justify-content-around">
     <div class="col-8" id = "img-sponsor" style="background-image: url('<%= cl_image_path @sportif.photo %>')">
