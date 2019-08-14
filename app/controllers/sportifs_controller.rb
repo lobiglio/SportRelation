@@ -26,13 +26,14 @@ class SportifsController < ApplicationController
     puts "Check 1"
     @sportif = Sportif.new(sportif_params)
     authorize @sportif
+    @sportif.user = current_user
     @sportif.save
     puts @sportif.inspect
+    puts @sportif.messages.errors
     redirect_to root_path
 
     # @sportif = Sportif.new(sportif_params)
     # authorize @sportif
-    # @sportif.user = current_user
     # if @sportif.save
     #   redirect_to sportif_path(@sportif)
     # else
