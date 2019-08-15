@@ -8,6 +8,10 @@
           <div class="card-product-infos-name">
             <h2><%= sportif.name %></h2>
             <p class="mb-2 resa-style" ><%= sportif.description %></p>
+            <p><%= sportif.reservations.size %> réservations prévues :</p>
+            <% if sportif.reservations.size > 0 %>
+              <p><%= sportif.reservations.first.status %> - <%= sportif.reservations.first.user.name %></p>
+            <% end %>
           </div>
         </div>
     </div>

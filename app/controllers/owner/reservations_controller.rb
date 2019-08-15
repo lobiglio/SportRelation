@@ -4,9 +4,8 @@ class Owner::ReservationsController < ApplicationController
   end
 
   def update
-
     @reservation = Reservation.find(params[:id])
-        raise
+    authorize([:owner, @reservation])
     @reservation.update(status: params[:status].to_i)
 
     redirect_to owner_reservations_path

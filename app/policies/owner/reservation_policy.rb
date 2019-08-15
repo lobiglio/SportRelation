@@ -6,6 +6,6 @@ class Owner::ReservationPolicy < ApplicationPolicy
   end
 
   def update?
-    record.user == user
+    record.sportif.user == user
   end
 end
