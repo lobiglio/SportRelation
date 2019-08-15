@@ -23,20 +23,14 @@ class SportifsController < ApplicationController
   end
 
   def create
-    puts "Check 1"
     @sportif = Sportif.new(sportif_params)
     authorize @sportif
     @sportif.user = current_user
     if @sportif.save
-      puts @sportif.inspect
       redirect_to sportif_path(@sportif)
     else
       render :new
     end
-
-    # if @sportif.save
-    #   redirect_to
-
   end
 
   def edit
