@@ -1,7 +1,46 @@
-#image-sportif {
-  display: flex;
+h1{
+  text-align: center;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1pt;
+  font-size: 30pt;
+  margin-bottom: 15px;
 }
 
+#img-sponsor {
+  border-radius: 4px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+  background-position: center;
+  background-size: cover;
+}
 
+#sportif-address{
+  text-align: center;
+  margin-bottom: 60px;
+}
 
+#sportif-description{
+  text-align: center;
+  margin-bottom: 60px;
+  margin-top: 60px;
+  font-family: 'Libre Caslon Display', serif;
+  font-style: oblique;
+}
 
+#sportif-offers {
+  color: white;
+  background-color: #75c6ea;
+  font-weight: light;
+}
+
+.card-body {
+  text-align: center;
+}
+
+body > div.container > div > div.col-4.text-center > div > p {
+  margin-bottom: 50px;
+  margin-top:  50px;
+}

@@ -1,21 +1,20 @@
 <div class="container" >
   <h1><%= @sportif.name %></h1>
-  <div id="image-sportif">
-    <div>
-      <img src="<%=@sportif.photo %>" alt="photo du sportif">
+  <p id = "sportif-address"><%= @sportif.address %></p>
+  <div class="row border justify-content-around">
+    <div class="col-8" id = "img-sponsor" style="background-image: url('<%= cl_image_path @sportif.photo %>')">
     </div>
-    <div>
-      <h3> <%= @sportif.offers%> </h3>
+
+    <div class = "col-4 text-center" >
+      <h2 id = "sportif-description"><%= @sportif.description %></h2>
+      <div class="card-body">
+        <h3 id = "sportif-offers"><%= @sportif.offers %></h3>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <%= link_to "Rejoins l'aventure", sportif_reservations_path(@sportif), method: :post, class: "btn btn-flat" %>
+      </div>
     </div>
   </div>
-  <div id ="presentation-sportif">
-    <h3> Description: </h3>
-    <p> <%= @sportif.description %> </p>
-  </div>
-
-<%= link_to "Rejoins l'aventure", new_sportif_reservation_path(@sportif) %>
-<% if policy(@sportif).edit? %>
-  <%= link_to "Modifier", edit_sportif_path(@sportif) %>
-<% end %>
-
+  <% if policy(@sportif).edit? %>
+    <%= link_to "Modifier", edit_sportif_path(@sportif) %>
+  <% end %>
 </div>
