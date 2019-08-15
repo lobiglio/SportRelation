@@ -10,6 +10,7 @@ class User < ApplicationRecord
   has_many :reservations, dependent: :destroy
   # has_many :booked_sportifs, through: :reservations, source: :sportif
 
-  validates :name, uniqueness: true, presence: true
-  validates :address, presence: true
+  validates :name, presence: true
+
+  mount_uploader :logo, PhotoUploader
 end
