@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'sportifs#index'
 
   resources :sportifs, only: [:index, :show, :new, :create, :edit, :update] do
-    resources :reservations, only: :create
+    resources :reservations, only: [:new, :create]
   end
   resources :reservations, only: :index
 

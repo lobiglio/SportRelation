@@ -3,8 +3,15 @@ class ReservationsController < ApplicationController
     @reservations = policy_scope(current_user.reservations)
   end
 
-  def create
+  def new
+    @sportif = Sportif.find(params[:sportif_id])
+    authorize @sportif
     @reservation = Reservation.new
+    authorize @reservation
+  end
+
+  def create
+    @reservation = Reservation.new(reservation_params)
     authorize @reservation
     @reservation.sportif = Sportif.find(params[:sportif_id])
     @reservation.user = current_user
@@ -14,5 +21,11 @@ class ReservationsController < ApplicationController
     else
       render :new
     end
+  end
+
+  private
+
+  def reservation_params
+    params.require(:reservation).permit(:date_begin, :date_end, :total_price)
   end
 end
