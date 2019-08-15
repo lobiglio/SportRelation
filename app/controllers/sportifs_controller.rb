@@ -7,7 +7,8 @@ class SportifsController < ApplicationController
     @markers = @sportifs.map do |sportif|
       {
         lat: sportif.latitude,
-        lng: sportif.longitude
+        lng: sportif.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { sportif: sportif })
       }
     end
   end
