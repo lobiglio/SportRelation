@@ -1,26 +1,14 @@
-<<<<<<< HEAD
-=======
-// .mapboxgl-popup {
-//   max-width: auto;
-//   border-radius: 50%;
-// }
-
-// card-map{
-//   height: auto;
-//   border-radius: 50%;
-// }
-// .mapboxgl-popup-content {
-//   text-align: center;
-//   font-family: 'Open Sans', sans-serif;
-//   border-radius: 50%;
-// }
-
-// #circle {
-//   border-radius: 50%;
-// }
-
->>>>>>> master
 .mapboxgl-popup {
   width: 200px;
   height: 200px;
+}
+
+.mapboxgl-popup-content {
+  border-radius: 50% !important;
+  padding: 4px !important;
+  background-color: #293462 !important;
+}
+
+#circle {
+  border-radius: 50% !important;
 }
