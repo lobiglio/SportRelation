@@ -13,4 +13,5 @@ class Sportif < ApplicationRecord
   validates :address, presence: true
   validates :offers, presence: true
   validates :description, presence: true
+  validates :photo, presence: true
 end
