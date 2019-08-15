@@ -1,15 +1,17 @@
+
 <div class="container vh-100">
   <h1>Your reservations</h1>
+
 
   <% @reservations.each do |reservation| %>
     <div class="card-product">
       <img src="<%= cl_image_path reservation.sportif.photo, height: 300, width: 400, crop: :fill %>"/>
-        <div class="card-product-infos">
+        <div class="card-product-infos-name">
           <h2><%= reservation.sportif.name %></h2>
-          <p>This reservation is <%= reservation.status %></p>
+          <p class="mb-2 resa-style" >This reservation is <%= reservation.status %></p>
         </div>
     </div>
-  <% end %>
+   <% end %>
 </div>
 
 

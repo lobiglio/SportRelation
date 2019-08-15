@@ -86,9 +86,30 @@
   margin-top: 8px;
 }
 
-.card-product .card-product-infos {
+// .card-product .card-product-infos {
+//   padding: 16px;
+// }
+
+.card-content {
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
+  // width: 100%;
+}
+
+.card-product .card-product-infos-name {
   padding: 16px;
 }
+
+.card-product .card-product-infos-status {
+  padding: 16px;
+}
+
+.card-product .card-product-infos-status p {
+  font-size: 14px;
+  font-weight: bolder;
+}
+
 
 .card-category a {
   color: white;

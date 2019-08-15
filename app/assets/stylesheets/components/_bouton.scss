@@ -43,3 +43,26 @@
   display:flex;
   justify-content: space-evenly;
 }
+
+.btn-accept {
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: #293462;
+  border: 1px solid #293462;
+  font-size: 12px;
+}
+
+.btn-refuse {
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: #943855;
+  border: 1px solid #943855;
+  font-size: 12px;
+}
+
+.btn-refuse:hover {
+  background: #c83660;
+  color: white;
+}

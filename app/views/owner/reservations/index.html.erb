@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>My Reservations</h1>
+
+  <% @reservations.each do |reservation| %>
+    <div class="card-product">
+      <img src="<%= cl_image_path reservation.sportif.photo, height: 300, width: 400, crop: :fill %>"/>
+        <div class="card-content d-flex justify-content-between align-items-center w-100">
+          <div class="card-product-infos-name">
+            <h2><%= reservation.sportif.name %></h2>
+          </div>
+          <div class="card-product-infos-status">
+            <p class="mb-2 resa-style" >This reservation is <%= reservation.status %></p>
+            <% if policy([:owner, reservation]).update? %>
+              <% if reservation.pending?  %>
+                <%= link_to 'Accept', owner_reservation_path(reservation, status: 1), method: :put, class: "btn btn-flat btn-accept" %>
+                <%= link_to 'Refuse', owner_reservation_path(reservation, status: 2), method: :put, class: "btn btn-flat btn-refuse" %>
+              <% elsif reservation.refused?%>
+                <%= link_to 'Accept', owner_reservation_path(reservation, status: 1), method: :put, class: "btn btn-flat btn-accept" %>
+               <% else %>
+                <%= link_to 'Refuse', owner_reservation_path(reservation, status: 2), method: :put, class: "btn btn-flat btn-refuse" %>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+    </div>
+  <% end %>
+</div>

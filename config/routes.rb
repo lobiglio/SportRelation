@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   end
   resources :reservations, only: :index
 
-  namespace :admin do
-    resources :reservations, only: :index
+  namespace :owner do
+    resources :sportifs, only: :index
+    resources :reservations, only: [:index, :update]
   end
-
 end
