@@ -1,13 +1,10 @@
 <div class="form min-vh-100">
 
   <div class="col-sm-6" id="formulaire">
-    <h1>Create your reservation!</h1>
+    <h1>Create your reservation, for: <u><%= @sportif.name %></u></h1>
+
 
     <%= simple_form_for([@sportif, @reservation]) do |f| %>
-
-    <div class="form-inputs">
-      <%= f.input :total_price %>
-    </div>
 
     <div class="form-inputs">
       <%= f.input :date_begin, as: :string, required: false, input_html: {class: "datepicker"} %>
