@@ -51,6 +51,6 @@ class SportifsController < ApplicationController
   end
 
   def sportif_params
-    params.require(:sportif).permit(:name, :address, :description, :photo, :offers)
+    params.require(:sportif).permit(:name, :address, :description, :photo, :offers, :price)
   end
 end

@@ -2,3 +2,13 @@
   width: 200px;
   height: 200px;
 }
+
+.mapboxgl-popup-content {
+  border-radius: 50% !important;
+  padding: 4px !important;
+  background-color: #293462 !important;
+}
+
+#circle {
+  border-radius: 50% !important;
+}
