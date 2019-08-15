@@ -10,6 +10,7 @@
       <div class="card-body">
         <h3 id = "sportif-offers"><%= @sportif.offers %></h3>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <h4 id = "sportif-price"><%= @sportif.price %>$ /jour</h4>
         <p class="card-text"></p>
         <%= link_to "Rejoins l'aventure", sportif_reservations_path(@sportif), method: :post, class: "btn btn-flat" %>
@@ -17,6 +18,11 @@
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
         <%= link_to "Rejoins l'aventure", new_sportif_reservation_path(@sportif), class: "btn btn-flat" %>
 >>>>>>> e855c09e6ed6c600535ddf480467de9c846c27fe
+=======
+        <h4 id="sportif-price"><%= @sportif.price %>€/jour</h4>
+        <p class="card-text"></p>
+        <%= link_to "Rejoins l'aventure", new_sportif_reservation_path(@sportif), class: "btn btn-flat" %>
+>>>>>>> 9d53800cc317fe85000a1cb4ebf95b73580858cd
       </div>
     </div>
   </div>
