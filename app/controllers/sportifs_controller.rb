@@ -29,12 +29,10 @@ class SportifsController < ApplicationController
     @sportif.user = current_user
     @sportif.save
     puts @sportif.inspect
-    redirect_to root_path
+    redirect_to sportif_path(@sportif)
 
-    # @sportif = Sportif.new(sportif_params)
-    # authorize @sportif
     # if @sportif.save
-    #   redirect_to sportif_path(@sportif)
+    #   redirect_to
     # else
     #   render :new
     # end
