@@ -20,13 +20,13 @@
           </li>
         <% end %>
         <li class="nav-item">
+          <%= link_to "See my reservations", reservations_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
           <%= link_to "My sportmen", owner_sportifs_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Valider mes reservations", owner_reservations_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Voir mes reservations", reservations_path, class: "nav-link" %>
+          <%= link_to "Validate my reservations", owner_reservations_path, class: "nav-link" %>
         </li>
         <li class="nav-item dropdown">
           <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
