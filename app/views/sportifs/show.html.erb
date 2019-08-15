@@ -10,7 +10,7 @@
       <div class="card-body">
         <h3 id = "sportif-offers"><%= @sportif.offers %></h3>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <%= link_to "Rejoins l'aventure", sportif_reservations_path(@sportif), method: :post, class: "btn btn-flat" %>
+        <%= link_to "Rejoins l'aventure", new_sportif_reservation_path(@sportif), class: "btn btn-flat" %>
       </div>
     </div>
   </div>

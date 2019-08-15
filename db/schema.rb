@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(version: 2019_08_15_084230) do
     t.string "status", default: "pending"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.date "date_begin"
+    t.date "date_end"
     t.index ["sportif_id"], name: "index_reservations_on_sportif_id"
     t.index ["user_id"], name: "index_reservations_on_user_id"
   end
