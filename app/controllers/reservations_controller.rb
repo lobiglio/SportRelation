@@ -1,6 +1,6 @@
 class ReservationsController < ApplicationController
   def index
-    @reservations = policy_scope(current_user.reservations)
+    @reservations = policy_scope(current_user.manager_reservations)
   end
 
   def create
@@ -16,4 +16,10 @@ class ReservationsController < ApplicationController
     end
   end
 
+  def update
+    @reservation = Reservation.find(params[:id])
+    @reservation.update(status: params[:status].to_i)
+
+    redirect_to reservations_path
+  end
 end

@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>Your booked reservations</h1>
+  <h1>My Reservations</h1>
 
   <% @reservations.each do |reservation| %>
     <div class="card-product">
@@ -10,14 +10,14 @@
           </div>
           <div class="card-product-infos-status">
             <p class="mb-2 resa-style" >This reservation is <%= reservation.status %></p>
-            <% if policy([:admin, reservation]).update? %>
+            <% if policy([:owner, reservation]).update? %>
               <% if reservation.pending?  %>
-                <%= link_to 'Accept', admin_reservation_path(reservation, status: 1), method: :put, class: "btn btn-flat btn-accept" %>
-                <%= link_to 'Refuse', admin_reservation_path(reservation, status: 2), method: :put, class: "btn btn-flat btn-refuse" %>
+                <%= link_to 'Accept', owner_reservation_path(reservation, status: 1), method: :put, class: "btn btn-flat btn-accept" %>
+                <%= link_to 'Refuse', owner_reservation_path(reservation, status: 2), method: :put, class: "btn btn-flat btn-refuse" %>
               <% elsif reservation.refused?%>
-                <%= link_to 'Accept', admin_reservation_path(reservation, status: 1), method: :put, class: "btn btn-flat btn-accept" %>
+                <%= link_to 'Accept', owner_reservation_path(reservation, status: 1), method: :put, class: "btn btn-flat btn-accept" %>
                <% else %>
-                <%= link_to 'Refuse', admin_reservation_path(reservation, status: 2), method: :put, class: "btn btn-flat btn-refuse" %>
+                <%= link_to 'Refuse', owner_reservation_path(reservation, status: 2), method: :put, class: "btn btn-flat btn-refuse" %>
               <% end %>
             <% end %>
           </div>

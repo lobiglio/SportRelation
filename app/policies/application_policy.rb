@@ -39,7 +39,7 @@ class ApplicationPolicy
 
     def initialize(user, scope)
       @user = user
-      @scope = scope
+      @scope = scope.is_a?(Array) ? scope.last : scope
     end
 
     def resolve

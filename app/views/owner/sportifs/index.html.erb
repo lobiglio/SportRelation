@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>My Sportmen</h1>
+
+  <% @sportifs.each do |sportif| %>
+    <div class="card-product">
+      <img src="<%= cl_image_path sportif.photo, height: 300, width: 400, crop: :fill %>"/>
+        <div class="card-content d-flex justify-content-between align-items-center w-100">
+          <div class="card-product-infos-name">
+            <h2><%= sportif.name %></h2>
+            <p class="mb-2 resa-style" ><%= sportif.description %></p>
+          </div>
+        </div>
+    </div>
+  <% end %>
+</div>
+
+
