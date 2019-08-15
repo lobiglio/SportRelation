@@ -1,4 +1,4 @@
-<div class="form">
+<div class="form" vh-100>
   <div class="col-sm-6" id="formulaire">
     <h2>Sign up</h2>
 
@@ -6,6 +6,12 @@
       <%= f.error_notification %>
 
       <div class="form-inputs">
+        <%= f.input :name,
+        required: true,
+        autofocus: true,
+        input_html: { autocomplete: "name" } %>
+        <%= f.input :logo %>
+        <%= f.input :logo_cache, as: :hidden %>
         <%= f.input :email,
         required: true,
         autofocus: true,

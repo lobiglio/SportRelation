@@ -28,9 +28,10 @@ puts "Creating sportifs"
 3.times do
   Sportif.create!(
     name: Faker::Name.unique.name,
-    address: Faker::Address.full_address,
-    description: 'Je me prepare pour les prochains Jeux Olympique',
-    offers: 'Pack Visibilite, Pack Corporate, Pack Immersion',
+    address: "Lyon, France",
+    description: '"Partage une régate à mes côtés et vis une experience hors du commun"',
+    offers: 'Pack Immersion',
+    price: rand(100..200),
     photo: File.open(Rails.root.join('db/fixtures/images/francois_dhaen.jpeg')),
     user: agence
   )
@@ -39,9 +40,10 @@ end
 2.times do
   Sportif.create!(
     name: Faker::Name.unique.name,
-    address: Faker::Address.full_address,
-    description: 'Je me prepare pour les prochains Jeux Olympique',
-    offers: 'Pack Visibilite, Pack Corporate, Pack Immersion',
+    address: "Londres, Angleterre",
+    description: '"Partage une régate à mes côtés et vis une experience hors du commun"',
+    offers: 'Pack Immersion',
+    price: rand(100..200),
     photo: File.open(Rails.root.join('db/fixtures/images/francois_gabart.jpg')),
     user: agence
   )
@@ -50,9 +52,10 @@ end
 3.times do
   Sportif.create!(
     name: Faker::Name.unique.name,
-    address: Faker::Address.full_address,
-    description: 'Je me prepare pour les prochains Jeux Olympique',
-    offers: 'Pack Visibilite, Pack Corporate, Pack Immersion',
+    address: "Milan, Italie",
+    description: '"Partage une régate à mes côtés et vis une experience hors du commun"',
+    offers: 'Pack Immersion',
+    price: rand(100..200),
     photo: File.open(Rails.root.join('db/fixtures/images/kelly_slater.jpg')),
     user: agence
   )

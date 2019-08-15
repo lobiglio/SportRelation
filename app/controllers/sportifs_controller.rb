@@ -3,7 +3,14 @@ class SportifsController < ApplicationController
   before_action :set_sportif, only: [:show, :edit, :update, :destroy]
 
   def index
-    @sportifs = policy_scope(Sportif).order(created_at: :desc)
+    @sportifs = policy_scope(Sportif).order(created_at: :desc).geocoded
+    @markers = @sportifs.map do |sportif|
+      {
+        lat: sportif.latitude,
+        lng: sportif.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { sportif: sportif })
+      }
+    end
   end
 
   def show
@@ -44,6 +51,6 @@ class SportifsController < ApplicationController
   end
 
   def sportif_params
-    params.require(:sportif).permit(:name, :address, :description, :photo, :offers)
+    params.require(:sportif).permit(:name, :address, :description, :photo, :offers, :price)
   end
 end
