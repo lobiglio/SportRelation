@@ -28,6 +28,7 @@ class ReservationsController < ApplicationController
     @reservation.update(status: params[:status].to_i)
 
     redirect_to reservations_path
+  end
 
   private
 
