@@ -13,11 +13,8 @@
         <%= link_to "Rejoins l'aventure", sportif_reservations_path(@sportif), method: :post, class: "btn btn-flat" %>
       </div>
     </div>
-
   </div>
-</div>
-<% if policy(@sportif).edit? %>
-  <%= link_to "Modifier", edit_sportif_path(@sportif) %>
-<% end %>
-
+  <% if policy(@sportif).edit? %>
+    <%= link_to "Modifier", edit_sportif_path(@sportif) %>
+  <% end %>
 </div>
