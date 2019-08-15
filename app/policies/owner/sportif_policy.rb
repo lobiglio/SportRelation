@@ -1,3 +1,5 @@
+require 'user'
+
 class Owner::ReservationPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
