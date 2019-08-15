@@ -9,7 +9,8 @@
       <h2 id = "sportif-description"><%= @sportif.description %></h2>
       <div class="card-body">
         <h3 id = "sportif-offers"><%= @sportif.offers %></h3>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <h4 id="sportif-price"><%= @sportif.price %>€/jour</h4>
+        <p class="card-text"></p>
         <%= link_to "Rejoins l'aventure", new_sportif_reservation_path(@sportif), class: "btn btn-flat" %>
       </div>
     </div>
