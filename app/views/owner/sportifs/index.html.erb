@@ -8,7 +8,7 @@
           <div class="card-product-infos-name">
             <h2><%= sportif.name %></h2>
             <p class="mb-2 resa-style" ><%= sportif.description %></p>
-            <p><%= sportif.reservations.size %> réservation(s) prévu(es) :</p>
+            <p><%= pluralize sportif.reservations.size, "réservation" %> :</p>
             <% if sportif.reservations.size > 0 %>
               <p> Status : <%= sportif.reservations.first.status %> - Reserved by : <%= sportif.reservations.first.user.name %></p>
             <% end %>
