@@ -10,3 +10,21 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.dropdown-menu {
+  min-width: 12rem;
+  background-color: #F8F9FA;
+  border: 0px;
+}
+
+.dropdown-menu > a {
+ font-size: 14px;
+}
+
+.dropdown-menu a:hover {
+ color: #4f81c7;
+}
+
+.navbar-brand > img:nth-child(1) {
+  height: 40px;
+}
