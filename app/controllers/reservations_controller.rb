@@ -15,7 +15,6 @@ class ReservationsController < ApplicationController
     authorize @reservation
     @reservation.sportif = Sportif.find(params[:sportif_id])
     @reservation.user = current_user
-
     if @reservation.save
       redirect_to reservations_path
     else
@@ -30,10 +29,9 @@ class ReservationsController < ApplicationController
     redirect_to reservations_path
   end
 
-    private
+  private
 
   def reservation_params
     params.require(:reservation).permit(:date_begin, :date_end)
   end
-
 end
