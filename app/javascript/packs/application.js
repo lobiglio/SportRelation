@@ -8,7 +8,10 @@ import { initAutocomplete } from '../plugins/init_autocomplete';
 import "../plugins/flatpickr";
 
 import { loadDynamicBannerText } from '../components/banner';
-loadDynamicBannerText();
+
 initMapbox();
 initAutocomplete();
 
+if (window.location.href === 'http://localhost:3000/' || window.location.href === 'https://sportrelation-lewagon276.herokuapp.com/') {
+  loadDynamicBannerText();
+}
