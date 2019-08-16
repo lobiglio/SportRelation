@@ -7,8 +7,8 @@
         <div class="card-content d-flex justify-content-between align-items-center w-100">
           <div class="card-product-infos-name">
             <h2><%= link_to sportif.name, sportif_path(sportif) %></h2>
-            <p class="mb-2 resa-style" ><%= sportif.description %></p>
-            <p><%= pluralize sportif.reservations.size, "réservation" %> :</p>
+            <p class="mb-2 resa-style" ><%= sportif.offers %></p>
+            <p><%= pluralize sportif.reservations.size, "réservation" %></p>
             <% if sportif.reservations.size > 0 %>
               <p> Status : <%= sportif.reservations.first.status %> - Reserved by : <%= sportif.reservations.first.user.name %> - From : <%= sportif.reservations.first.date_begin %> to <%= sportif.reservations.first.date_end%> </p>
             <% end %>
