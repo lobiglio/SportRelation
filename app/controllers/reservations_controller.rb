@@ -1,6 +1,6 @@
 class ReservationsController < ApplicationController
   def index
-    @reservations = policy_scope(current_user.manager_reservations)
+    @reservations = policy_scope(current_user.reservations)
   end
 
   def new
