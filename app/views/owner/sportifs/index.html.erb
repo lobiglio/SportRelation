@@ -10,7 +10,7 @@
             <p class="mb-2 resa-style" ><%= sportif.description %></p>
             <p><%= sportif.reservations.size %> réservation(s) prévu(es) :</p>
             <% if sportif.reservations.size > 0 %>
-              <p> Status : <%= sportif.reservations.first.status %> - Reserved by : <%= sportif.reservations.first.user.name %></p>
+              <p> Status : <%= sportif.reservations.first.status %> - Reserved by : <%= sportif.reservations.first.user.name %> - From : <%= sportif.reservations.first.date_begin %> to <%= sportif.reservations.first.date_end%> </p>
             <% end %>
           </div>
         </div>
