@@ -12,7 +12,9 @@
         <h3 id = "sportif-offers"><%= @sportif.offers %></h3>
         <h3 id="sportif-price"><%= @sportif.price %>€ / jour</h3>
         <p class="card-text"></p>
+        <% unless policy(@sportif).edit? %>
         <%= link_to "Rejoins l'aventure", new_sportif_reservation_path(@sportif), class: "btn btn-flat" %>
+        <% end %>
       </div>
     </div>
   </div>
