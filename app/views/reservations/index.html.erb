@@ -9,7 +9,7 @@
     <div class = "description-price d-flex justify-content-between align-items-center w-100">
       <div class="card-product-infos-name">
         <h2><%= reservation.sportif.name %></h2>
-        <p class="mb-2 resa-style" >This reservation is <%= reservation.status %></p>
+        <p class="mb-2 resa-style" >This reservation is <strong> <%= reservation.status %></strong>.</p>
       </div>
       <div class = "total-price-of-reservation">
         <h4> <% number_of_days = (reservation.date_end - reservation.date_begin).to_i %>
