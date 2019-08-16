@@ -1,7 +1,7 @@
 <div class="form min-vh-100">
 
   <div class="col-sm-6" id="formulaire">
-    <h1>Create your reservation, for: <u><%= @sportif.name %></u></h1>
+    <h2>Create your reservation, for: <br> <strong><%= @sportif.name %></strong></h2>
 
 
     <%= simple_form_for([@sportif, @reservation]) do |f| %>
